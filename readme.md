@@ -5,27 +5,29 @@ Official PyTorch implementation of **UMDM-SFADA** for cross-center medical image
   <p><b>图 1.</b> UMDM-SFADA 整体框架图</p>
 </div>
 ##📦 Dataset Preparation
+```
 data/
 └── YOUR_DATASET/
     │
     ├── 📄 Index files (.txt)
-    │   ├── trainlist.txt                       # 3D training samples
-    │   ├── train_slices.txt                    # 2D training slices
-    │   ├── vallist.txt                         # Validation samples
-    │   ├── testlist.txt                             # Testing samples
-    │   ├── stage1_{active_method}.txt          # Stage-1: actively selected samples
-    │   ├── all_{active_method}.txt             # Stage-2: all 3D samples
-    │   └── all_slice_{active_method}.txt       # Stage-2: all 2D slices
+    │   ├── trainlist.txt                     # 3D training samples
+    │   ├── train_slices.txt                  # 2D training slices
+    │   ├── vallist.txt                       # Validation samples
+    │   ├── testlist.txt                      # Testing samples
+    │   ├── stage1_{active_method}.txt        # Stage-1: actively selected samples
+    │   ├── all_{active_method}.txt           # Stage-2: all 3D samples
+    │   └── all_slice_{active_method}.txt     # Stage-2: all 2D slices
     │
     ├── 📦 3D volumes (.h5)
     │   ├── case001.h5
     │   ├── case002.h5
     │   └── ...
     │
-    └── 📂 slices/                               # 2D slices extracted from 3D volumes
+    └── 📂 slices/                            # 2D slices extracted from 3D volumes
         ├── case001_slice_0.h5
         ├── case001_slice_1.h5
         └── ...
+```
 ### 📥 Preprocessed Data Download
 
 To facilitate reproducibility, we provide our **preprocessed datasets** (including all `.h5` files and index `.txt` files) via Baidu Netdisk:
