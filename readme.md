@@ -2,7 +2,6 @@
 Official PyTorch implementation of **UMDM-SFADA** for cross-center medical image segmentation.
 <div align="center">
   <img src="code/framework.png" width="85%">
-  <p><b>图 1.</b> UMDM-SFADA 整体框架图</p>
 </div>
 
 ## 📦 Dataset Preparation
