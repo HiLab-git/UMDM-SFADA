@@ -8,14 +8,6 @@ UMDM-SFADA is designed for cross-center medical image segmentation when source-d
   <img src="code/framework.png" width="85%">
 </div>
 
-## Highlights
-
-- Source-free active domain adaptation for cross-center tumor segmentation.
-- 2D and 3D training/evaluation pipelines.
-- Uncertainty-guided test-time augmentation for active target-sample selection.
-- Morphometric-enhanced diversity modeling for selecting informative and diverse cases.
-- Support for preprocessed NPC-GTV and breast cancer segmentation datasets.
-
 ## Repository Structure
 
 ```text
