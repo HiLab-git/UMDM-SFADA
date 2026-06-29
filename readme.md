@@ -250,16 +250,6 @@ Evaluation writes NIfTI predictions and metric files under:
 | `--tta_num` | Selection scripts | Number of test-time augmentations used to estimate uncertainty. |
 | `--patch_size` | Train/fine-tune scripts | Input crop size. Defaults are `[128, 128, 128]` for 3D and `[320, 320]` for 2D. |
 
-## Implementation Notes
-
-Before launching long experiments, check these current code details:
-
-- `2D_train.py` and `3D_selection.py` import `dataloaders.dataset_3d`, while this repository provides `dataloaders/dataset.py`. If you see `ModuleNotFoundError: dataloaders.dataset_3d`, change those imports to `from dataloaders.dataset import ...`.
-- `2D_finetuning.py` and `3D_finetuning.py` use `inquire=True` in `argparse.add_argument`; standard `argparse` does not support this keyword. Replace it with `required=True` or remove it before running.
-- `2D_selection.py` and `3D_selection.py` reference `parser.size_regulization`, but the declared flag is `--mophology_enhancement`. Add a matching argument or change the condition to the declared flag.
-- Several boolean arguments use `type=bool`; in standard argparse, strings such as `"False"` may still evaluate to `True`. For robust runs, prefer editing defaults or converting these arguments to `store_true`/`store_false` flags.
-- The scripts assume CUDA is available and call `.cuda()` directly.
-
 ## Dataset Citation
 
 If you use the preprocessed datasets provided in this repository, please cite the corresponding original papers in addition to this work.
