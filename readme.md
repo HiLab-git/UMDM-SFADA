@@ -319,3 +319,5 @@ If you use the preprocessed datasets provided in this repository, please cite th
 ## Acknowledgements
 
 This implementation builds on common medical image segmentation utilities, nnU-Net style losses, and dynamic U-Net architecture components. Thanks to the authors of the referenced datasets and open-source toolkits.
+- [nnU-Net](https://github.com/MIC-DKFZ/nnUNet)
+- [SSL4MIS](https://github.com/HiLab-git/SSL4MIS)
